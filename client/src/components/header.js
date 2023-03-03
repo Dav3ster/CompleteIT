@@ -64,9 +64,8 @@ function Header() {
        <Col md={6} style={styles.colstyles}>
         <nav style={styles.tabs} className='nav'> 
          <ul style={styles.ul}>
-          <li>button</li>
-          <li>button</li>
-          <li>button</li>
+             {/* <li><Link to={"/"} style={styles.tabItems}>Home</Link></li> */}
+             {/* <li><Link to={"/LoginSignup"} style={styles.tabItems}>login-signup</Link></li> */}
          </ul>
         </nav>
        </Col>
