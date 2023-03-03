@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Nav';
 import Col from 'react-bootstrap/Navbar';
+// import Logout from "../components/logout"
+
 
 const styles = {
   name: {
