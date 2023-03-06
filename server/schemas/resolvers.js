@@ -11,7 +11,7 @@ const resolvers = {
       const params = username ? { username } : {};
       return Todo.find(params).sort({ createdAt: -1 });
     },
-    todo: async (parent, { thoughtId }) => {
+    todo: async (parent, { todoId }) => {
       return Todo.findOne({ _id: todoId });
     },
     me: async (parent, args, context) => {
@@ -87,7 +87,7 @@ const resolvers = {
  
     deleteTodo: async (parent, { todoId }, context) => {
       if (context.user) {
-        const thought = await Thought.findOneAndDelete({
+        const todo = await Todo.findOneAndDelete({
           _id: todoId,
           username: context.user.username,
         });

@@ -6,39 +6,40 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      todos {
         _id
-        thoughtText
-        createdAt
+        date
+        title
+        description
+        priority
+      
       }
     }
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+export const QUERY_TODOS = gql`
+  query getTodos {
+    todos {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
+      date
+      title
+      description
+      priority
+      
     }
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+export const QUERY_SINGLE_TODO = gql`
+  query getSingleTodo($todoId: ID!) {
+    todo(todoId: $todoId) {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
-      }
+      date
+      title
+      description
+      priority
+      
     }
   }
 `;
@@ -49,11 +50,12 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      todos {
         _id
-        thoughtText
-        thoughtAuthor
-        createdAt
+        date
+        title
+        description
+        priority
       }
     }
   }
