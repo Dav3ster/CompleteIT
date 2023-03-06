@@ -45,7 +45,24 @@ const resolvers = {
 
       return { token, user };
     },
-    addToDo: async (parent, { todo }, context) => {
+    addTodo: async (parent, { todo }, context) => {
+      if (context.user) {
+        const thought = await Thought.create({
+          toDoContent,
+          toDoAuthor: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { todos: todo._id } }
+        );
+
+        return thought;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+
+    editTodo: async (parent, { todo }, context) => {
       if (context.user) {
         const thought = await Thought.create({
           toDoContent,
@@ -62,7 +79,7 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
  
-    deleteToDo: async (parent, { todoId }, context) => {
+    deleteTodo: async (parent, { todoId }, context) => {
       if (context.user) {
         const thought = await Thought.findOneAndDelete({
           _id: thoughtId,
