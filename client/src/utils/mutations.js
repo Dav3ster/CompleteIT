@@ -24,33 +24,41 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
+export const ADD_TODO = gql`
+  mutation addToDo($toDoText: String!) {
+    addToDo(toDoText: $toDoText) {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-      }
+      date
+      toDoAuthor
+      title
+      description
+      priority
     }
   }
 `;
 
-export const ADD_COMMENT = gql`
-  mutation addComment($thoughtId: ID!, $commentText: String!) {
-    addComment(thoughtId: $thoughtId, commentText: $commentText) {
+export const EDIT_TODO = gql`
+  mutation editToDo($toDoText: String!) {
+    editToDo(toDoText: $toDoText) {
       _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-        createdAt
-      }
+      date
+      toDoAuthor
+      title
+      description
+      priority
+    }
+  }
+`;
+
+export const DELETE_TODO = gql`
+  mutation deleteToDo($toDoText: String!) {
+    deleteToDo(toDoText: $toDoText) {
+      _id
+      date
+      toDoAuthor
+      title
+      description
+      priority
     }
   }
 `;
