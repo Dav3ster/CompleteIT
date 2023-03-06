@@ -47,9 +47,12 @@ const resolvers = {
     },
     addTodo: async (parent, { todo }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          toDoContent,
-          toDoAuthor: context.user.username,
+        const todo = await Todo.create({
+          date: date,
+          title: title,
+          description: description,
+          priority: priority,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -57,16 +60,19 @@ const resolvers = {
           { $addToSet: { todos: todo._id } }
         );
 
-        return thought;
+        return todo;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
 
     editTodo: async (parent, { todo }, context) => {
       if (context.user) {
-        const thought = await Thought.create({
-          toDoContent,
-          toDoAuthor: context.user.username,
+        const todo = await Todo.create({
+          date: date,
+          title: title,
+          description: description,
+          priority: priority,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -74,7 +80,7 @@ const resolvers = {
           { $addToSet: { todos: todo._id } }
         );
 
-        return thought;
+        return todo;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -82,16 +88,16 @@ const resolvers = {
     deleteTodo: async (parent, { todoId }, context) => {
       if (context.user) {
         const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
+          _id: todoId,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
+          { $pull: { todos: todo._id } }
         );
 
-        return thought;
+        return todo;
       }
       throw new AuthenticationError('You need to be logged in!');
     },

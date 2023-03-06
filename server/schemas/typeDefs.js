@@ -12,7 +12,7 @@ const typeDefs = gql`
 
   type Todo {
     _id: ID
-    date: Date
+    date: Int
     title: String
     description: String
     priority: String
@@ -35,8 +35,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addTodo( date: Date, title: String, description: String, priority: String): Todo
-    editTodo( date: Date, title: String, description: String, priority: String): Todo
+    addTodo( date: Int, title: String, description: String, priority: String): Todo
+    editTodo( date: Int, title: String, description: String, priority: String): Todo
     deleteTodo(todoId: ID!): Todo
     
   }
