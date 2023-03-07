@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Nav';
 import Col from 'react-bootstrap/Navbar';
@@ -64,8 +64,9 @@ function Header() {
        <Col md={6} style={styles.colstyles}>
         <nav style={styles.tabs} className='nav'> 
          <ul style={styles.ul}>
-             {/* <li><Link to={"/"} style={styles.tabItems}>Home</Link></li> */}
-             {/* <li><Link to={"/LoginSignup"} style={styles.tabItems}>login-signup</Link></li> */}
+             <li><Link to={"/"} style={styles.tabItems}>Home</Link></li>
+             <li><Link to={"/LoginSignup"} style={styles.tabItems}>login-signup</Link></li>
+             <li><Link to={"/Dashboard"} style={styles.tabItems}>Dashboard</Link></li>
          </ul>
         </nav>
        </Col>
