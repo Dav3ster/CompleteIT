@@ -65,7 +65,8 @@ function Header() {
         <nav style={styles.tabs} className='nav'> 
          <ul style={styles.ul}>
              <li><Link to={"/"} style={styles.tabItems}>Home</Link></li>
-             <li><Link to={"/LoginSignup"} style={styles.tabItems}>login-signup</Link></li>
+             <li><Link to={"/Login"} style={styles.tabItems}>login</Link></li>
+             <li><Link to={"/Signup"} style={styles.tabItems}>Sign up</Link></li>
              <li><Link to={"/Dashboard"} style={styles.tabItems}>Dashboard</Link></li>
          </ul>
         </nav>
