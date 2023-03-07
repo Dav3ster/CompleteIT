@@ -11,9 +11,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // commented out pages & components for now - david
 import Header from "./components/header";
 import Home from "./pages/Home.js";
-// import Login from './pages/Log';
+import Dashboard from "./pages/Dashboard";
+import LoginSignup from "./pages/LoginSignup";
 import Footer from "./components/footer";
 import MyToDo from "./components/myToDo";
+import { AiFillDashboard } from "react-icons/ai";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -47,6 +49,8 @@ function App() {
           <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/LoginSignup" element={<LoginSignup />} />
+            <Route exact path="/Dashboard" element={<Dashboard />} />
           </Routes>
 
           <MyToDo />
