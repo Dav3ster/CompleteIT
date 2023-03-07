@@ -20,7 +20,6 @@ export default function dashboard() {
             <h2 className="Weekly Forecast"></h2>
             <div id="todayToDo">
                 <WeekBar></WeekBar>
-                <h2>Complete It Today!</h2>
                 <MyToDo></MyToDo>
             </div>
             <button id="createToDo">Create To-Do</button>
