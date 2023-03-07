@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import PriorityCheck from "./PriorityCheck";
+import Calendar from 'react-calendar'
 
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/Nav";
+
+// eslint-disable-next-line
+import "./formstyle.css"
 
 
 function ToDoForm(props) {
   const [input, setInput] = useState("");
   const [priority, setPriority] = useState("");
+  const [date, setDate] = useState("");
 
   const inputRef = useRef(null);
 
@@ -24,6 +29,16 @@ function ToDoForm(props) {
     setPriority(e.target.value);
   }
 
+  const [dateValue, setDateValue] = useState(new Date());
+
+  function onDateChange(nextDateValue) {
+    setDateValue(nextDateValue);
+  }
+
+  const handleDayChange = (date) => {
+    setDate(date);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -31,16 +46,20 @@ function ToDoForm(props) {
       // Generates a Random number, prevents To-Dos from having the same ID!
       id: Math.floor(Math.random() * 10000),
       text: input,
-      priority: priority
+      priority: priority,
+      date: date
     });
 
     setInput("");
     setPriority("");
-
-
+    setDate("")
   };
 
-  
+  const tileClassName = ({ date, view }) => {
+    if (view === 'month' && dateValue.getMonth() === date.getMonth() && dateValue.getDate() === date.getDate()) {
+      return 'selected-date';
+    }
+  }
 
   return (
     <Container>
@@ -54,13 +73,26 @@ function ToDoForm(props) {
           ref={inputRef}
         ></input>
         <Row>
-        <label>
-          Priority:
-          <input type="radio" name="priority" value="high" checked={priority === "high"} onChange={handlePriorityChange} /> High
-          <input type="radio" name="priority" value="medium" checked={priority === "medium"} onChange={handlePriorityChange} /> Medium
-          <input type="radio" name="priority" value="low" checked={priority === "low"} onChange={handlePriorityChange} /> Low
-        </label>
+          <label>
+            Priority:
+            <input type="radio" name="priority" value="high" checked={priority === "high"} onChange={handlePriorityChange} /> High
+            <input type="radio" name="priority" value="medium" checked={priority === "medium"} onChange={handlePriorityChange} /> Medium
+            <input type="radio" name="priority" value="low" checked={priority === "low"} onChange={handlePriorityChange} /> Low
+          </label>
         </Row>
+
+        <div>
+          <label htmlFor="date">Date:</label>
+          <input type="date" id="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        </div>
+
+        <Calendar 
+          onDateChange={onDateChange}
+          tileClassName={tileClassName}
+          value={dateValue}
+          onClickDay={handleDayChange}
+          />
+
       </form>
 
       <PriorityCheck />

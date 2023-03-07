@@ -34,7 +34,6 @@ function ToDoList({todos, completeTodo, removeTodo, updateTodo}) {
             <AiOutlineCloseCircle onClick={() => removeTodo(todo.id)}
             className="delete-icon" />
             <BiEdit 
-            // TODO:  Add priority to setEdit function once we implement it.
             onClick={() => setEdit({ id:todo.id, value: todo.text})}
             className="edit-icon"/>
         </div>

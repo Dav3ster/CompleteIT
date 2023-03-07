@@ -17,6 +17,7 @@
         "concurrently": "^7.6.0"
     },
     "dependencies": {
+        "react-calendar": "^4.0.0",
         "react-icons": "^4.8.0"
     }
 }

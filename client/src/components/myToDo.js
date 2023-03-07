@@ -52,7 +52,7 @@ function MyToDo() {
 
 
     return (
-        <div>
+        <div className="todo-app">
             <h2>Complete it Today!</h2>
             <ToDoForm onSubmit={addTodo} />
             <ToDoList
