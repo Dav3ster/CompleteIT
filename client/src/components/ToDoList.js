@@ -6,7 +6,7 @@ import { BiEdit } from 'react-icons/bi'
 function ToDoList({todos, completeTodo, removeTodo, updateTodo}) {
     const [edit, setEdit] = useState({
         id: null, 
-        value: ''
+        value: '',
     })
 
     const submitUpdate = value => {
@@ -27,6 +27,8 @@ function ToDoList({todos, completeTodo, removeTodo, updateTodo}) {
     <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index}>
         
         <div key={todo.id} onClick={() => completeTodo(todo.id)}>
+            {todo.title}
+            <br></br>
             {todo.text}
         </div>
 

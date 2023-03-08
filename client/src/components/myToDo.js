@@ -50,7 +50,6 @@ function MyToDo() {
         setTodos(updatedTodos)
     }
 
-
     return (
         <div className="todo-app">
             <h2>Complete it Today!</h2>
