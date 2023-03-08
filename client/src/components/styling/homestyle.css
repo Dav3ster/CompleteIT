@@ -1,0 +1,69 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.site-Title {
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+    
+        rgb(120, 120, 120) 100%
+      );
+      text-align: center;
+      padding: 20px;
+      border-radius: 1rem;
+      box-shadow: 2px 2px black;
+      color: white;
+}
+
+.site-Title h1 {
+    font-size: 40px;
+}
+
+.logSign {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logButtons {
+    padding: 20px;
+    color: white;
+    border-radius: 20%;
+    margin: 10px;
+}
+
+.logButtons:hover {
+    color: white;
+    box-shadow: 2px 2px goldenrod;
+}
+
+#loginBtn {
+    background: linear-gradient(
+    45deg,
+    rgb(120, 120, 120) , 
+
+    rgb(10, 10, 10),
+
+    rgb(120, 120, 120)
+  );
+
+  border: 2.5px black solid;
+}
+
+#signupBtn {
+    background: linear-gradient(
+    45deg,
+    rgb(120, 120, 120) , 
+
+    rgb(10, 10, 10),
+
+    rgb(120, 120, 120)
+  );
+
+  border: 2.5px black solid;
+}
