@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --carolinablue: rgba(75, 156, 211, 1);
+    --violet: rgba(145, 55, 179, 1)
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: linear-gradient(
+      45deg,
+      var(--carolinablue) 0%,
+      var(--violet) 100%
+    );
+  }
+  
