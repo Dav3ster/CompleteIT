@@ -5,5 +5,85 @@
     "description":"Complete coding for front end and back end",
     "priority": "High",
     "username": "FishingAllDay"
+  },
+
+  {
+    "date":20230306,
+    "title": "Create Presentation", 
+    "description":"Create final project presentation",
+    "priority": "High",
+    "username": "FishingAllDay"
+  },
+
+  {
+    "date":20230307,
+    "title": "Finish Resume", 
+    "description":"Update Resume",
+    "priority": "High",
+    "username": "FishingAllDay"
+  },
+
+  {
+    "date":20230306,
+    "title": "Get a new job", 
+    "description":"Send applications to companies",
+    "priority": "Medium",
+    "username": "NoFlair"
+  },
+
+  {
+    "date":20230307,
+    "title": "Open a Case of the Mondays", 
+    "description":"Pizza Flingers",
+    "priority": "Medium",
+    "username": "AllTheFlair"
+  },
+
+  {
+    "date":20230308,
+    "title": "Create Game Board", 
+    "description":"Create Jump to Conclusions Mat",
+    "priority": "High",
+    "username": "Jump2Conclusions"
+  },
+
+  {
+    "date":20230308,
+    "title": "File Insurance Paperwork", 
+    "description":"Talk to lawyer to file accident paperwork",
+    "priority": "High",
+    "username": "Jump2Conclusions"
+  },
+
+  {
+    "date":20230309,
+    "title": "Destroy Copy Machine", 
+    "description":"Steal and Destroy Copy Machine",
+    "priority": "High",
+    "username": "PCLoadLetter"
+  },
+
+  {
+    "date":20230309,
+    "title": "Create Rounding App", 
+    "description":"Create code to skim rounding pennies to bank account",
+    "priority": "High",
+    "username": "PCLoadLetter"
+  },
+
+  {
+    "date":2023030,
+    "title": "Finish Drywall Project", 
+    "description":"Wake up at 6AM and drag up to Las Calinas McDonalds",
+    "priority": "High",
+    "username": "DrywallKing"
+  },
+
+  {
+    "date":20230306,
+    "title": "Checkout Channel 9", 
+    "description":"Setup VCR to record Channel 9 shows",
+    "priority": "High",
+    "username": "DrywallKing"
   }
 ]
