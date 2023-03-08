@@ -1,3 +1,4 @@
+const { expressMiddleware } = require ('@apollo/server/express4');
 const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const path = require('path');
@@ -29,7 +30,7 @@ app.get('/', (req, res) => {
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
-  // server.applyMiddleware({ app }); //commented out the middleware for testing -david
+  app.use("/graphql",expressMiddleware(server))
   
   db.once('open', () => {
     app.listen(PORT, () => {
