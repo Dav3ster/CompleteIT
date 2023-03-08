@@ -9,18 +9,26 @@ db.once('open', async () => {
     await User.deleteMany({});
 
     await User.create(userSeeds);
+    await Todo.create(toDoSeeds);
 
-    for (let i = 0; i < toDoSeeds.length; i++) {
-      const { _id, username } = await Todo.create(toDoSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: username },
-        {
-          $addToSet: {
-            todo: _id,
-          },
-        }
-      );
-    }
+    // for (let i = 0; i < toDoSeeds.length; i++) {
+    //   const { _id, date, title, description,priority, username } = await Todo.create(toDoSeeds[i]);
+    //   const user = await User.findOneAndUpdate(
+    //     { username: username },
+    //     {
+    //       $addToSet: {
+    //         todo: _id,
+    //         date: date,
+    //         title: title,
+    //         description: description,
+    //         priority: priority
+
+            
+
+    //       },
+    //     }
+    //   );
+    // }
   } catch (err) {
     console.error(err);
     process.exit(1);

@@ -7,6 +7,7 @@ const resolvers = {
       user: async (parent, { username }) => {
       return User.findOne({ username }).populate('todos');
     },
+   
     todos: async (parent, { username }) => {
       const params = username ? { username } : {};
       return Todo.find(params).sort({ createdAt: -1 });
