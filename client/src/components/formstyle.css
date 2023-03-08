@@ -1,6 +1,10 @@
-.selected-date {
+.current-date {
   background-color: goldenrod;
   color: white;
+}
+
+.selected-date {
+  background-color: violet;
 }
 
 /* ToDoForm Styling */
@@ -188,16 +192,28 @@ h1 {
   font-weight: bold;
 }
 
-.text-danger {
-  color: red;
+#highP {
+  background-color: maroon;
+  padding: 10px;
+  border-radius: 30%;
 }
 
-.text-warning {
-  color: orange;
+#medP {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 30%;
 }
 
-.text-info {
-  color: green;
+#lowP {
+  background-color: green;
+  padding: 10px;
+  border-radius: 30%;
+}
+
+.priorityChecks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .icons {
