@@ -23,6 +23,11 @@ const toDoSchema = new Schema({
     enum: ['High', 'Medium', 'Low'],
     required: true,
   },
+  username: {
+    type: String,
+    required: true,
+    
+  }
  
  
 })

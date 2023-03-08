@@ -17,6 +17,16 @@ export const QUERY_USER = gql`
     }
   }
 `;
+export const QUERY_ALL_TODOS = gql`
+query getAllTodos 
+todos {
+  _id
+  date
+  title
+  description
+  priority
+}
+`
 
 export const QUERY_TODOS = gql`
   query getTodos {$username: ID!}
