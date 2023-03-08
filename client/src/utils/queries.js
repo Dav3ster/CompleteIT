@@ -19,8 +19,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_TODOS = gql`
-  query getTodos {
-    todos {
+  query getTodos {$username: ID!}
+   todos (username: $username) {
       _id
       date
       title

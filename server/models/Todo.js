@@ -10,7 +10,7 @@ const toDoSchema = new Schema({
     type: String,
     required: true,
     minlength: 1,
-    maxlength: 20,
+    maxlength: 40,
   },
   description: {
     type: String,
