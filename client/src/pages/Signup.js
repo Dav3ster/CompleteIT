@@ -90,6 +90,13 @@ const Signup = () => {
                 {error.message}
               </div>
             )}
+                        <br></br>
+            <div className="card-header bg-dark text-light p-2 text-center">
+              <p>Meant to Login instead? Click here!</p>
+              <Link className="btn btn-block btn-primary" to="/Login">
+                Login
+              </Link>
+            </div>
           </div>
         </div>
       </div>

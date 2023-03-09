@@ -7,11 +7,12 @@ import MyToDo from "../components/myToDo";
 import WeekBar from "../components/WeekBar";
 import PriorityList from "../components/priorityList";
 
+import "../components/styling/dashboardStyle.css";
 
 export default function dashboard() {
   return (
     <>
-       <Container fluid>
+      <Container fluid>
         <Row>
           <Col className="tasksSorted">
             <PriorityList></PriorityList>
@@ -19,15 +20,20 @@ export default function dashboard() {
           <Col>
             {/* <h2 className="Weekly Forecast"></h2> */}
             <div id="todayToDo">
-                <WeekBar></WeekBar>
-                <MyToDo></MyToDo>
+              <center>
+                <h2 className="page-Title">
+                  Welcome "Username". Time to CompleteIt!
+                </h2>
+              </center>
+              <WeekBar></WeekBar>
+              <MyToDo></MyToDo>
             </div>
           </Col>
           <Col>
             {/* Placeholder for spacing reasons and for the potential Leaderboard? */}
           </Col>
         </Row>
-      </Container> 
+      </Container>
     </>
   );
 }
