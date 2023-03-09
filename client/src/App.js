@@ -56,7 +56,6 @@ function App() {
             <Route exact path="/Signup" element={<Signup />} />
             <Route exact path="/Dashboard" element={<Dashboard />} />
           </Routes>
-
           <Footer />
         </ApolloProvider>
       </Router>
