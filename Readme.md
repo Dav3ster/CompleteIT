@@ -13,6 +13,10 @@
 
 This is CompleteIT a handy little app, made to help keep you on top of your productivity! CompleteIT is a fullstack application that utilizes apolloServer and graphql to read and write from the server to the client. CompleteIT offers a all in one planning tool so you can keep track of chores,task, or goals in a timely fashion. You can easily plan your week and keep track of high priority tasks from day to day.
 
+## Image of webpage
+ 
+![Image](/client/src/images/readmeimg.png)
+
 ## Installation
 
 To run this project, install dependencies it locally using npm:
