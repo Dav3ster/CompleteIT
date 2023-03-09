@@ -5,27 +5,9 @@ to display the created toDoList in various styles.
 */
 
 import React, { useState } from "react";
+import Container from "react-bootstrap/esm/Container";
 import ToDoForm from "./createToDo";
 import ToDoList from "./ToDoList";
-
-// import { gql, useMutation } from "@apollo/client";
-
-// /**
-//  * Mutation to increment a track's number of views
-//  */
-// const INCREMENT_TRACK_VIEWS = gql`
-//   mutation IncrementTrackViews($incrementTrackViewsId: ID!) {
-//     incrementTrackViews(id: $incrementTrackViewsId) {
-//       code
-//       success
-//       message
-//       track {
-//         id
-//         numberOfViews
-//       }
-//     }
-//   }
-// `;
 
 function MyToDo() {
   const [todos, setTodos] = useState([]);
@@ -39,12 +21,14 @@ function MyToDo() {
 
     setTodos(newTodos);
     console.log(...newTodos);
+
   };
 
   const updateTodo = (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
       return;
     }
+     console.log(newValue);
 
     setTodos((prev) =>
       prev.map((item) => (item.id === todoId ? newValue : item))
@@ -68,25 +52,25 @@ function MyToDo() {
     setTodos(updatedTodos);
   };
 
-//   useMutation(INCREMENT_TRACK_VIEWS, {
-//     variables: { incrementTrackViewsId: id },
-//   });
-
-//   const [incrementTrackViews] = useMutation(INCREMENT_TRACK_VIEWS, {
-//     variables: { incrementTrackViewsId: id },
-//   });
-
+  
   return (
-    <div className="todo-app">
-      <h2>Complete it Today!</h2>
-      <ToDoForm onSubmit={addTodo} />
-      <ToDoList
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
-    </div>
+    <Container fluid>
+      <div className="todo-section">
+      <div className="todo-list">
+        <h2>Your List!</h2>
+          <ToDoList
+            todos={todos}
+            completeTodo={completeTodo}
+            removeTodo={removeTodo}
+            updateTodo={updateTodo}
+          />
+        </div>
+        <div className="todo-app">
+          <h2>Complete it Today!</h2>
+          <ToDoForm onSubmit={addTodo} />
+        </div>
+      </div>
+    </Container>
   );
 }
 
