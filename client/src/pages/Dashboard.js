@@ -6,7 +6,6 @@ import Col from "react-bootstrap/Navbar";
 import MyToDo from "../components/myToDo";
 import WeekBar from "../components/WeekBar";
 import PriorityList from "../components/priorityList";
-import Footer from "../components/footer";
 
 
 export default function dashboard() {
@@ -29,7 +28,6 @@ export default function dashboard() {
           </Col>
         </Row>
       </Container> 
-      <Footer />
     </>
   );
 }
