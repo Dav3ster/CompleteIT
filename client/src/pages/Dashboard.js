@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Nav";
 import Col from "react-bootstrap/Navbar";
 
 import MyToDo from "../components/myToDo";
-import WeekBar from "../components/WeekBar";
+import WeekBar from "../components/weekBar";
 import PriorityList from "../components/priorityList";
 
 
