@@ -1,0 +1,32 @@
+.header {
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: linear-gradient(45deg, rgb(99, 156, 255), rgb(77, 68, 255), rgb(107, 0, 213));
+  border-bottom: solid 4px black;
+  padding: 10px;
+}
+
+.logo {
+}
+
+.timeAndDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(105, 105, 105);
+    box-shadow: 2px 2px black;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.time {
+    text-align: center;
+}

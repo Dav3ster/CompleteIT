@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 :root {
     --carolinablue: rgba(75, 156, 211, 1);
     --violet: rgba(145, 55, 179, 1)
 }
+
+
 
 a {
     text-decoration: none;

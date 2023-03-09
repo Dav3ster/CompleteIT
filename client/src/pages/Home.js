@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom"
+import dashboard from "./Dashboard";
 
 import "../components/styling/homestyle.css"
 
@@ -17,6 +18,7 @@ export default function home() {
         <Link to={"/Login"} className="logButtons" id="loginBtn">login</Link>
         <Link to={"/Signup"} className="logButtons" id="signupBtn">Sign up</Link>
         </div>
+
       </Container>
     </>
   );

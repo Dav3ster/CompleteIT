@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
+import Dashboard from "./Dashboard"
 
 import Auth from '../utils/auth';
 
@@ -39,7 +40,7 @@ const Login = (props) => {
       password: '',
     });
   };
-
+  
   return (
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
@@ -49,7 +50,7 @@ const Login = (props) => {
             {data ? (
               <p>
                 Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
+                <Link to={'/Dashboard'}>to the Dashboard!</Link>
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
@@ -84,6 +85,11 @@ const Login = (props) => {
                 {error.message}
               </div>
             )}
+            <br></br>
+            <div className='card-header bg-dark text-light p-2 text-center'>
+              <p>Meant to signup instead? Click here!</p>
+              <Link className="btn btn-block btn-primary" to="/Signup">Signup</Link>
+            </div>
           </div>
         </div>
       </div>

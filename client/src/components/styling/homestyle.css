@@ -16,6 +16,7 @@
       padding: 20px;
       border-radius: 1rem;
       box-shadow: 2px 2px black;
+      text-shadow: 2px 2px black;
       color: white;
 }
 
@@ -39,7 +40,7 @@
 
 .logButtons:hover {
     color: white;
-    box-shadow: 2px 2px goldenrod;
+    box-shadow: inset 0px 0px 8px rgb(94, 134, 255), 0 0 10px var(--violet)
 }
 
 #loginBtn {

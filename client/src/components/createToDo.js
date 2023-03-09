@@ -73,6 +73,19 @@ function ToDoForm(props) {
     }
   };
 
+    // Add a class based on priority
+    const getPriorityClass = () => {
+      if (priority === "high") {
+        return "high-priority";
+      } else if (priority === "medium") {
+        return "medium-priority";
+      } else if (priority === "low") {
+        return "low-priority";
+      } else {
+        return "";
+      }
+    };
+
   return (
     <Container>
       <form className="todo-form" onSubmit={handleSubmit}>
@@ -100,7 +113,7 @@ function ToDoForm(props) {
                 type="radio"
                 name="priority"
                 value="high"
-                checked={priority === "high"}
+                checked={priority === "high" === getPriorityClass}
                 onChange={handlePriorityChange}
               />{" "}
               High
