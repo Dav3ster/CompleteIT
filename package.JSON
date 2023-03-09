@@ -17,8 +17,11 @@
         "concurrently": "^7.6.0"
     },
     "dependencies": {
+        "dotenv": "^16.0.3",
         "moment": "^2.29.4",
         "react-calendar": "^4.0.0",
-        "react-icons": "^4.8.0"
+        "react-icons": "^4.8.0",
+        "semantic-ui-css": "^2.5.0",
+        "semantic-ui-react": "^2.1.4"
     }
 }
