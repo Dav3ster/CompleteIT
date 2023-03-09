@@ -19,7 +19,7 @@ This is CompleteIT a handy little app, made to help keep you on top of your prod
 
 ## Installation
 
-To run this project, install dependencies it locally using npm:
+To run this project, install dependencies locally using npm:
 
 ```
 npm run install
@@ -28,7 +28,7 @@ npm run install
 
 ## Usage
 
-After installing npm packages, the application will be invoked by using the following command:
+After installing npm packages, the application can be invoked by using the following command:
 
 ```
 npm run build
