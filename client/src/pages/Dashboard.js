@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/Nav";
 import Col from "react-bootstrap/Navbar";
-
 import MyToDo from "../components/myToDo";
 import WeekBar from "../components/weekBar";
 import PriorityList from "../components/priorityList";
@@ -22,7 +21,7 @@ export default function dashboard() {
             <div id="todayToDo">
               <center>
                 <h2 className="page-Title">
-                  Welcome "Username". Time to CompleteIt!
+                  Welcome! Time to CompleteIt!
                 </h2>
               </center>
               <WeekBar></WeekBar>
