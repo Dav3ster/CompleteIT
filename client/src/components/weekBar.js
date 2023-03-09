@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 import Calendar from "react-calendar";
 import "./styling/weekBarStyle.css"
 
-function weekBar() {
+function WeekBar() {
   const today = new Date();
   const startOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 1);
   const endOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDate() - today.getDay() + 7);
@@ -18,4 +18,4 @@ function weekBar() {
   );
 }
 
-export default weekBar;
+export default WeekBar;

@@ -1,0 +1,20 @@
+
+.page-Title {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        90deg,
+        rgba(93, 12, 255, 1) 0%,
+    
+        rgb(120, 120, 120) 100%
+      );
+      text-align: center;
+      padding: 20px;
+      width: fit-content;
+      border-radius: 1rem;
+      box-shadow: 2px 2px black;
+      text-shadow: 2px 2px black;
+      color: white;
+}
