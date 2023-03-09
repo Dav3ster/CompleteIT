@@ -2,27 +2,45 @@ import React from 'react';
 
 import "./styling/footerStyle.css"
 
-function Footer() {
+const Footer = () => {
+  const programmers = [
+    {
+      name: 'Joshua Toback',
+      github: 'https://github.com/JoshuaToback',
+      portfolio: 'https://joshuatoback.github.io/ReactPortfolio/',
+      linkedin: 'https://www.linkedin.com/in/joshua-toback/',
+    },
+    {
+      name: 'David Stewart',
+      github: 'https://github.com/Dav3ster',
+      portfolio: 'https://dav3ster.github.io/The-Real-Deal/',
+      linkedin: 'https://www.linkedin.com/in/david-stewart-8b046725a/',
+    },
+    {
+      name: 'Mark Turner',
+      github: 'https://github.com/TBoneXX',
+      portfolio: 'https://portfolio.com/programmer3',
+      linkedin: 'https://www.linkedin.com/in/mark-edward-turner/',
+    },
+  ];
+
   return (
-    <div className="footer-container">
-      <h3>Developed by the Three Musketeers</h3>
-      <div className="footer-box">
-        <img src="https://image.flaticon.com/icons/png/128/2010/2010528.png" alt="Code icon" />
-        <h3>Code</h3>
-        <p>Passionate about writing clean, efficient and maintainable code.</p>
+  <footer className="footer">
+    <h3>Developed by the Three Musketeers</h3>
+      <div className="programmers">
+        {programmers.map(programmer => (
+          <div className="programmer" key={programmer.name}>
+            <h3 className="programmer__name">{programmer.name}</h3>
+            <ul className="programmer__links">
+              <li><a href={programmer.github}>Github</a></li>
+              <li><a href={programmer.portfolio}>Portfolio</a></li>
+              <li><a href={programmer.linkedin}>LinkedIn</a></li>
+            </ul>
+          </div>
+        ))}
       </div>
-      <div className="footer-box">
-        <img src="https://image.flaticon.com/icons/png/128/2947/2947871.png" alt="Coffee icon" />
-        <h3>Coffee</h3>
-        <p>Believes coffee is the fuel that powers great code.</p>
-      </div>
-      <div className="footer-box">
-        <img src="https://image.flaticon.com/icons/png/128/2991/2991757.png" alt="Keyboard icon" />
-        <h3>Learn</h3>
-        <p>Always looking to learn new technologies and improve skills.</p>
-      </div>
-    </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
