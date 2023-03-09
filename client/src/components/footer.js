@@ -1,24 +1,28 @@
-import React from "react";
-import Container from "react-bootstrap/esm/Container";
-import Row from 'react-bootstrap/Nav';
-import Col from 'react-bootstrap/Navbar';
+import React from 'react';
 
-const styles = {
-    colStyles: {
-        fontSize: "30px"
-    }
-}
+import "./styling/footerStyle.css"
 
-export default function footer() {
+function Footer() {
   return (
-    <Container fluid>
-      <Row>
-        <Col md={12} style={styles.colStyles}>
-          <center>
-            <p>Developed by The Three Musketeers</p>
-          </center>
-        </Col>
-      </Row>
-    </Container>
+    <div className="footer-container">
+      <h3>Developed by the Three Musketeers</h3>
+      <div className="footer-box">
+        <img src="https://image.flaticon.com/icons/png/128/2010/2010528.png" alt="Code icon" />
+        <h3>Code</h3>
+        <p>Passionate about writing clean, efficient and maintainable code.</p>
+      </div>
+      <div className="footer-box">
+        <img src="https://image.flaticon.com/icons/png/128/2947/2947871.png" alt="Coffee icon" />
+        <h3>Coffee</h3>
+        <p>Believes coffee is the fuel that powers great code.</p>
+      </div>
+      <div className="footer-box">
+        <img src="https://image.flaticon.com/icons/png/128/2991/2991757.png" alt="Keyboard icon" />
+        <h3>Learn</h3>
+        <p>Always looking to learn new technologies and improve skills.</p>
+      </div>
+    </div>
   );
 }
+
+export default Footer;
